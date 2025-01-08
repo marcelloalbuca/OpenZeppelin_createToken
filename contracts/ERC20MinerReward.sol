@@ -7,7 +7,7 @@ contract ERC20MinerReward is ERC20 {
 
     event LogNewAlert(string description, address indexed _from, uint256 _n);
 
-    constructor() public ERC20("MinerReward", "MRW") {}
+    constructor() ERC20("MinerReward", "MRW") {}
 
     function _reward() public {
         _mint(block.coinbase, 20);
